@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+h1 {
+font-size:2.5em;
+}
+h2 {
+font-size:2em;
+}
+div {
+font-size:1.3em;
+}
+#ultimoinput {
+font-size:1.005em;
+}
+footer {
+font-size:1.3em;
+}
+</style>
+</head>
+<body>
+<header><h1>Campos de Formulários em HTML</h1></header>
+<hr>
+<main>
+<section>
+<h2>Formulário do Tipo Text:</h2>
+<div>
+<form>
+<label for="fname">Digite seu nome:</label>
+<input type="text" id="fname" name="fname"><br>
+</form>
+</div>
+</section>
+<hr>
+<section>
+<h2>Formulário do Tipo Submit: </h2>
+<div>
+<form action="/action_page.php">
+<div>
+<label for="fname">Digite seu nome:</label><br>
+<input type="text" id="fname" name="fname" >
+<br>
+</div>
+<input type="submit" value="Submit (Enviar)">
+</form>
+</div>
+</section>
+<hr>
+<section>
+<h2>Formulário do Tipo Reset: </h2>
+<div>
+<form action="/action_page.php">
+<label for="fname">Digite seu nome:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<input type="reset" value="Reset (Redefinir) ">
+</form>
+</div>
+</section>
+<hr>
+<section>
+<h2>Formulário do Tipo Checkbox:</h2>
+<div>
+<form>
+<form>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> Eu tenho uma bicileta</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> Eu tenho um carro</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> Eu tenho uma casa</label>
+</form>
+</form>
+</div>
+</section>
+<hr>
+<section>
+<h2>Formulário do Tipo Email:</h2>
+<div>
+<form>
+<label for="email">Digite seu E-mail:</label>
+<input type="email" id="email" name="email">
+</form></div>
+</section>
+<hr>
+<section>
+<h2>Formulário do Tipo Buttom:</h2>
+<div>
+<input type="button" onclick="alert('Bem-vindo a esse site!')"
+
+value="Clique aqui!" id="ultimoinput">
+</div>
+</section>
+<hr>
+<section>
+<h2>Formulário do Tipo Radio:</h2>
+<div>
+
+<form>
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="fav_language"
+
+value="JavaScript">
+
+<label for="javascript">JavaScript</label>
+</form>
+</div>
+</section>
+<hr>
+<section>
+<h2>Pre-selected Option</h2>
+<div>
+<p>Você pode pré-selecionar uma o
+<form action="/action_page.php">
+<label for="cars">Escolha um carro:</label>
+<select id="cars" name="cars">
+<option value="chevrolet">Chevrolet</option>
+<option value="renaut">Renaut</option>
+<option value="fiat" selected>Fiat</option>
+<option value="volkswagen">Volkswagen</option>
+</select>
+<input type="submit">
+</form>
+</div>
+</section>
+<hr>
+<section>
+    <h2>Campo Select</h2>
+    <div>
+        <p>O elemento select é usado para criar uma lista suspensa.</p>
+        <form action="/action_page.php">
+          <label for="cars">Escolha um carro:</label>
+          <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Renault</option>
+            <option value="audi">Audi</option>
+          </select>
+          <br><br>
+          <input type="submit" value="Enviar">
+        </form>
+        <p>Clique no botão "Enviar" e os dados do formulário serão enviados para uma página no
+            servidor chamado "action_page.php".</p>
+    </div>
+<section>
+    <hr>
+<h2>Campo Textarea</h2>
+<p>O elemento textarea define um campo de entrada de várias linhas.</p>
+<form action="/action_page.php">
+<textarea name="message" rows="10" cols="30">O gato estava brincando no
+jardim.</textarea>
+<br><br>
+<input type="submit">
+</form>
+</section>
+<hr>
+<section>
+<h2>Formulário com Fieldset</h2>
+<p>O elemento fieldset é usado para agrupar dados relacionados em um formulário e o
+elemento legend define uma legenda para o elemento fieldset.</p>
+<form action="/action_page.php">
+<fieldset>
+<legend>Estilo:</legend>
+<label for="fname">Primeiro nome:</label><br>
+<input type="text" id="fname" name="fname" value="John"><br>
+<label for="lname">Último nome</label><br>
+<input type="text" id="lname" name="lname" value="Doe"><br><br>
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+</section>
+<hr>
+<section>
+<h2>O elemento Output</h2>
+<p>O elemento de saída representa o resultado de um cálculo.</p>
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+0
+<input type="range" id="a" name="a" value="50">
+100 +
+<input type="number" id="b" name="b" value="50">
+=
+<output name="x" for="a b"></output>
+<br><br>
+<input type="submit">
+</form>
+<p><strong>Nota:</strong> O elemento de saída não é compatível com a versão
+anterior 13 do Edge.</p>
+</section>
+<hr>
+<section>
+<h2>Formulário do Tipo Color</h2>
+
+<p>The <strong>input type="color"</strong>é usado para campos de entrada que devem conter uma cor.</p>
+<form action="/action_page.php">
+<label for="favcolor">Escolha sua cor favorita: </label>
+<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+<input type="submit" value="Submit">
+</form>
+<p><b>Nota:</b> type="color" não é compatível com Internet Explorer 11 ou Safari 9.1</p>
+</section>
+<hr>
+<section>
+    <h1>Campo Date</h1>
+
+<form action="/action_page.php">
+  <label for="birthday">Aniversário:</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit">
+</form>
+
+<p><strong>Nota:</strong> O type="date" não é compatível com Internet Explorer 11 ou Safari 14.1 anterior.</p>
+</section>
+<hr>
+<section>
+<h2>Tipo de Campo Datetime-Local </h2>
+<p>O <strong>input type="datetime-local"</strong>especifica uma entrada de data e hora. </p>
+<form action="/action_page.php">
+<label for="birthdaytime">Aniversário (data e hora):</label>
+<input type="datetime-local" id="birthdaytime" name="birthday">
+<input type="submit" value="Enviar">
+</form>
+<p><strong>Nota:</strong>O type="datetime-local" não é suportado no Internet Explorer 11 ou Safari 14.1 anterior.</p>
+</section>
+<hr>
+<section>
+<h2>Campo Image</h2>
+<form action="/action_page.php">
+<label for="fname">Primeiro nome: </label>
+<input type="text" id="fname" name="fname"><br><br>
+<label for="lname"> Último nome: </label>
+<input type="text" id="lname" name="lname"><br><br>
+<input type="image" src="img_submit.gif" alt="Enviar" width="48" height="48">
+</form>
+<p><b>Note:</b> O input type = "image" envia as coordenadas X e Y do clique
+    que ativou o botão de imagem.</p>
+</section>
+<hr>
+<section>
+<h1>Tipo File</h1>
+<p>Mostra um campo de seleção de arquivo que permite que um arquivo seja escolhido para upload:</p>
+<form action="/action_page.php">
+<label for="myfile">Selecione um arquivo:</label>
+<input type="file" id="myfile" name="myfile"><br><br>
+<input type="submit" value="Enviar">
+</form>
+</section>
+
+<hr>
+<section>
+<h1>Campo Hidden</h1>
+<form action="/action_page.php">
+<label for="fname">Nome</label>
+<input type="text" id="fname" name="fname"><br><br>
+<input type="hidden" id="custId" name="custId" value="3487">
+<input type="submit" value="Enviar">
+</form>
+<p><strong>Nota:</strong> O campo oculto não é mostrado ao usuário, mas os dados
+    é enviado quando o formulário é enviado.</p>
+</section>
+<hr>
+<section>
+<h2>Campo Number</h2>
+<p>O <strong>input type="number"</strong> define um campo de entrada numérico.</p>
+<p>Você pode usar os atributos min e max para adicionar restrições numéricas na entrada
+    campo:</p>
+<form action="/action_page.php">
+<label for="quantity">Número (entre 1 e 5):</label>
+<input type="number" id="quantity" name="quantity" min="1" max="5">
+<input type="submit" value="Enviar">
+</form>
+</section>
+<hr>
+<section>
+<h2>Campo Range</h2>
+<p>Dependendo do suporte do navegador: O tipo de entrada "range" pode ser exibido como um
+    controle deslizante.</p>
+<form action="/action_page.php" method="get">
+<label for="vol">Volume (entre 0 e 50):</label>
+<input type="range" id="vol" name="vol" min="0" max="50">
+<input type="submit" value="Enviar">
+</form>
+</section>
+<hr>
+<section>
+<h2>Campo Search</h2>
+<p>O <strong>input type="search"</strong> é usado para campos de pesquisa (comporta-se como
+    um campo de texto normal):</p>
+<form action="/action_page.php">
+<label for="gsearch">Pesquise no Google:</label>
+<input type="search" id="gsearch" name="gsearch">
+<input type="submit" value="Enviar">
+</form>
+</section>
+<hr>
+<section>
+<h2>Campo Tel</h2>
+<p>O <strong>input type="tel"</strong>é usado para campos de entrada que devem
+    conter um número de telefone:</p>
+<form action="/action_page.php">
+<label for="phone">Digite um número de telefone: </label><br><br>
+<input type="tel" id="phone" name="phone" placeholder="123-45-678"
+pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+<small>Formato: 123-45-678</small><br><br>
+<input type="submit" value="Enviar">
+</form>
+</section>
+<hr>
+<section>
+<h1>Campo de Time</h1>
+<p>O <strong>input type="time"</strong> permite ao usuário selecionar uma hora (sem fuso horário).</p>
+<p>Se o navegador suportar, um seletor de tempo aparece ao inserir a entrada
+    campo.</p>
+<form action="/action_page.php">
+<label for="appt">Selecione um horário:</label>
+<input type="time" id="appt" name="appt">
+<input type="submit" value="Enviar">
+</form>
+<p><strong>Nota:</strong> type="time" não é compatível com o Internet Explorer 11 ou
+    Safari anterior 14.1.</p>
+</section>
+<hr>
+<section>
+<h1>Campo de URL</h1>
+<p>O <strong>input type="url"</strong>é usado para campos de entrada que devem
+    conter um endereço URL:</p>
+<form action="/action_page.php">
+<label for="homepage">Adicione sua página inicial:</label>
+<input type="url" id="homepage" name="homepage">
+<input type="submit" value="Enviar">
+</form>
+</section>
+<hr>
+<section>
+<h1>Formulário do Tipo Week</h1>
+<p>O <strong>input type="week"</strong> permite ao usuário selecionar uma semana e um
+    ano.</p>
+<p>Se o navegador for compatível, um seletor de data será exibido ao inserir o campo de entrada.</p>
+<form action="/action_page.php">
+<label for="week">Escolha uma semana: </label>
+<input type="week" id="week" name="week">
+<input type="submit" value="Enviar">
+</form>
+<p><strong>Nota:</strong> type="week" não é compatível com Firefox, Safari ou
+    Internet Explorer 11.</p>
+</section>
+</main>
+<hr>
+<section>
+    <h2>Formulário do Tipo Month</h2>
+    <div>
+        <label for="bdaymonth">Aniversário (mês e ano):</label>
+<input type="month" id="bdaymonth" name="bdaymonth">
+    </div>
+</section>
+<hr>
+<section>
+    <h2>Formulário do Tipo Password</h2>
+    <div>
+        <label for="pass">Senha (no mínimo 8 dígitos): </label>
+        <input type="password" id="pass" name="password"
+               minlength="8" required>
+    </div>
+</section>
+<hr>
+<footer>
+Aluno(a): José Nilton Vieira; <br>
+Turma(a): 1º Ano Informática 2022; <br>
+Escola: E.E.E.P. Amélia Figueiredo de Lavor; <br>
+Professor(a): Luis Ilderlândio. <br>
+</footer>
+</body>
+</html>
